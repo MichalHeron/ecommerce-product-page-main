@@ -1,0 +1,47 @@
+.cart {
+  z-index: 3;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+}
+.cart .horiLine {
+  border-color: rgb(242, 243, 241);
+}
+
+.checkoutBtn {
+  border: none;
+  width: 100%;
+  background-color: rgb(255, 125, 26);
+}
+
+.checkoutBtn:hover {
+  background-color: rgb(255, 177, 117);
+}
+
+.checkoutBtn:active {
+  background-color: rgb(255, 125, 26) !important;
+}
+
+.imageProductCart {
+  width: 92px;
+}
+
+.itemNamePriceContainer img {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.trash {
+  margin: auto 0;
+  height: 14px;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .cart {
+    left: 50%;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    max-width: 400px;
+  }
+}/*# sourceMappingURL=cart.css.map */

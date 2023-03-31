@@ -1,0 +1,49 @@
+.container {
+	.navbar-toggler {
+		box-shadow: none;
+		border: solid;
+		border-color: transparent;
+		border-width: 0.1rem;
+		padding-left: 0;
+		padding-right: 0;
+		.navbar-toggler-icon {
+			background-image: url(../images/icon-menu.svg);
+			width: 3rem;
+			height: 1.5rem;
+			background-size: auto;
+		}
+		.navbar-toggler-icon:hover {
+			filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(30deg) brightness(94%) contrast(100%);
+		}
+	}
+	.navbar-toggler:focus {
+		box-shadow: none;
+		border-color: gray;
+	}
+}
+.btn-close {
+	background: transparent url(../images/icon-close.svg) center/1em auto no-repeat;
+}
+.menuMobile {
+max-width: 60vw;
+min-width: max-content;}
+.navbar-brand {
+	font-weight: bold;
+	font-size: 2.5rem;
+	transform: translateY(-6%);
+}
+.nav-link {
+	font-weight: bold;
+}
+.avatar {
+	height: 1.8rem;
+}
+.itemsAmountCart {
+	font-size: 0.6rem;
+	right: -0.5rem;
+	top: 0.2rem;
+	color: white;
+	background-color: orange;
+	padding: 0rem 0.5rem;
+	border-radius: 0.4rem;
+}

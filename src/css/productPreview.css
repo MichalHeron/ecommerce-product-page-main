@@ -1,0 +1,20 @@
+.productPreview {
+  width: 100vw;
+}
+
+.prevNextBtn {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  border-radius: 2rem;
+  aspect-ratio: 1/1;
+}
+.prevNextBtn img {
+  display: block;
+}
+.prevNextBtn--prev {
+  left: 1.5rem;
+}
+.prevNextBtn--next {
+  right: 1.5rem;
+}/*# sourceMappingURL=productPreview.css.map */

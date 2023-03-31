@@ -1,0 +1,68 @@
+.container {
+  text-align: left;
+}
+
+.corpName {
+  text-transform: uppercase;
+  color: rgb(255, 125, 26);
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.itemName, .price {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.9rem;
+}
+
+.priceBox .discount {
+  color: rgb(255, 125, 26);
+  font-weight: bold;
+  background-color: rgb(253, 242, 234);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.4rem;
+}
+
+.prevPrice {
+  text-decoration: line-through;
+}
+
+.btn-group {
+  width: 100%;
+}
+.btn-group .btn:first-child,
+.btn-group .btn:last-child {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-group .btn:first-child {
+  background-image: url(../images/icon-minus.svg);
+}
+.btn-group .btn:last-child {
+  background-image: url(../images/icon-plus.svg);
+}
+.btn-group .btn:nth-child(2) {
+  width: 100%;
+  font-weight: bold;
+}
+
+.addToCartBtn {
+  border: none;
+  width: 100%;
+  background-color: rgb(255, 125, 26);
+}
+.addToCartBtn svg {
+  transform: scale(60%);
+}
+
+.addToCartBtn:hover {
+  background-color: rgb(255, 177, 117);
+}
+
+.addToCartBtn:active {
+  background-color: rgb(255, 125, 26) !important;
+}/*# sourceMappingURL=productDescription.css.map */
