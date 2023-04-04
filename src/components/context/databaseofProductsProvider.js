@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import product1Thumb from '../../images/image-product-1-thumbnail.jpg'
 import product1 from '../../images/image-product-1.jpg'
@@ -12,8 +12,10 @@ import product4 from '../../images/image-product-4.jpg'
 export const ProductsContext = React.createContext()
 
 const ProductsProvider = ({ children }) => {
+	const [cart, setCart] = useState(0)
 	const value = {
-        cart: 0,
+		cart: cart,
+		setCart: cart => setCart(cart),
 		products: {
 			product1: {
 				name: 'Fall Limited Edition Sneakers',
@@ -29,9 +31,9 @@ const ProductsProvider = ({ children }) => {
 					image4Thumb: product4Thumb,
 					image4: product4,
 				},
-				price: 125.00,
-				discount: "50%",
-				oldPrice: "$250.00",
+				price: 125.0,
+				discount: '50%',
+				oldPrice: '$250.00',
 			},
 		},
 	}
