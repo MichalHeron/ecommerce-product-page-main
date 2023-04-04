@@ -13,7 +13,10 @@ export const ProductsContext = React.createContext()
 
 const ProductsProvider = ({ children }) => {
 	const [cart, setCart] = useState(0)
+	const [itemsInBasket, setItemsInBasket] = useState(0)
 	const value = {
+		itemsInBasket: itemsInBasket,
+		setItemsInBasket: itemsInBasket => setItemsInBasket(itemsInBasket),
 		cart: cart,
 		setCart: cart => setCart(cart),
 		products: {

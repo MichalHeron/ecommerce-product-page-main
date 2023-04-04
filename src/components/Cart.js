@@ -7,7 +7,10 @@ import { ProductsContext } from './context/databaseofProductsProvider'
 
 function ItemBasket() {
 	const { deleteIcon, image } = useContext(ImageContext)
-	const { products } = useContext(ProductsContext)
+	const { products, setItemsInBasket } = useContext(ProductsContext)
+	function HandleDeleteitems() {
+		setItemsInBasket(0)
+	}
 	return (
 		<div className='d-flex'>
 			<Image className=' imageProductCart rounded me-3' src={products.product1.image.image1Thumb}></Image>
@@ -15,19 +18,21 @@ function ItemBasket() {
 				<p>{products.product1.name}</p>
 				<p>${products.product1.price}</p>
 			</div>
-			<Image className='trash' src={deleteIcon}></Image>
+			<Image className='trash' src={deleteIcon} onClick={() => HandleDeleteitems()}></Image>
 		</div>
 	)
 }
 
 export default function CartPreview() {
+	const { itemsInBasket } = useContext(ProductsContext)
+	console.log(itemsInBasket)
 	return (
 		<div
 			className='m-2 rounded position-absolute cart
     '>
 			<p className='cartTitle container pt-3'>Cart</p>
 			<div className='border-top border-2 horiLine'></div>
-			{false ? (
+			{itemsInBasket == 0 ? (
 				<p className='cartEmpty'>Your cart is empty.</p>
 			) : (
 				<div className='cartNotEmpty container mt-3'>
