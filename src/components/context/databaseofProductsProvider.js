@@ -14,11 +14,14 @@ export const ProductsContext = React.createContext()
 const ProductsProvider = ({ children }) => {
 	const [cart, setCart] = useState(0)
 	const [itemsInBasket, setItemsInBasket] = useState(0)
+	const [cartShow, setCartShow] = useState(false)
 	const value = {
 		itemsInBasket: itemsInBasket,
 		setItemsInBasket: itemsInBasket => setItemsInBasket(itemsInBasket),
 		cart: cart,
 		setCart: cart => setCart(cart),
+		cartShow: cartShow,
+		setCartShow: cartShow => setCartShow(cartShow),
 		products: {
 			product1: {
 				name: 'Fall Limited Edition Sneakers',

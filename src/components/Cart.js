@@ -25,7 +25,6 @@ function ItemBasket() {
 
 export default function CartPreview() {
 	const { itemsInBasket } = useContext(ProductsContext)
-	console.log(itemsInBasket)
 	return (
 		<div
 			className='m-2 rounded position-absolute cart

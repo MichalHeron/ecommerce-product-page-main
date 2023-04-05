@@ -15,13 +15,7 @@ export default function ProductDescription() {
 		if (cart > 0) setCart(cart - 1)
 	}
 	function HandleAddToCart() {
-		// console.log(itemsInBasket)
-		// let item = itemsInBasket.push(cart)
-		// item.push(cart)
-		// console.log(itemsInBasket)
-		// console.log(cart)
 		setItemsInBasket(itemsInBasket + cart)
-		// console.log(itemsInBasket)
 	}
 
 	return (

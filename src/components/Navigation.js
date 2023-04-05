@@ -1,15 +1,21 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Offcanvas from 'react-bootstrap/Offcanvas'
-import Button from 'react-bootstrap/Button'
 import { Image } from 'react-bootstrap'
 import '../css/navigation.css'
 import { ImageContext } from './context/imgProvider'
+import { ProductsContext } from './context/databaseofProductsProvider'
+import CartPreview from './Cart'
 
 export default function Navigation() {
 	const { avatarIcon, cartIcon } = useContext(ImageContext)
+	const { cartShow, setCartShow } = useContext(ProductsContext)
+
+	function HandleShowCart() {
+		setCartShow(!cartShow)
+	}
 	return (
 		<Container>
 			<Navbar bg='white' expand={'md'}>
@@ -34,7 +40,7 @@ export default function Navigation() {
 					</Offcanvas.Body>
 				</Navbar.Offcanvas>
 				<Nav className='justify-content-end flex-row'>
-					<Nav.Link href='#actionCart' className='me-3  position-relative'>
+					<Nav.Link href='#actionCart' className='me-3  position-relative' onClick={() => HandleShowCart()}>
 						<Image className='cart' src={cartIcon}></Image>
 						<div className='itemsAmountCart position-absolute'>3</div>
 					</Nav.Link>
@@ -52,6 +58,7 @@ export default function Navigation() {
 					width: '100%',
 				}}
 			/>
+			{cartShow ? <CartPreview /> : ''}
 		</Container>
 	)
 }
