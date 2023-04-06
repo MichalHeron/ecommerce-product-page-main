@@ -11,7 +11,7 @@ import CartPreview from './Cart'
 
 export default function Navigation() {
 	const { avatarIcon, cartIcon } = useContext(ImageContext)
-	const { cartShow, setCartShow } = useContext(ProductsContext)
+	const { cartShow, setCartShow, itemsInBasket } = useContext(ProductsContext)
 
 	function HandleShowCart() {
 		setCartShow(!cartShow)
@@ -42,7 +42,7 @@ export default function Navigation() {
 				<Nav className='justify-content-end flex-row'>
 					<Nav.Link href='#actionCart' className='me-3  position-relative' onClick={() => HandleShowCart()}>
 						<Image className='cart' src={cartIcon}></Image>
-						<div className='itemsAmountCart position-absolute'>3</div>
+						{itemsInBasket == 0 ? '' : <div className='itemsAmountCart position-absolute'>1</div>}
 					</Nav.Link>
 					<Nav.Link href='#actionAvatar'>
 						<Image className='avatar' src={avatarIcon}></Image>

@@ -25,7 +25,9 @@
 
 .itemNamePriceContainer {
 	// width: 55vw;
-
+	.priceRatio {
+		font-weight: bold;
+	}
 	img {
 		margin-right: 0;
 		margin-left: auto;

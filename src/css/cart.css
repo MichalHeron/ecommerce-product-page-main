@@ -26,6 +26,9 @@
   width: 92px;
 }
 
+.itemNamePriceContainer .priceRatio {
+  font-weight: bold;
+}
 .itemNamePriceContainer img {
   margin-right: 0;
   margin-left: auto;

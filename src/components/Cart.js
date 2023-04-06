@@ -7,7 +7,7 @@ import { ProductsContext } from './context/databaseofProductsProvider'
 
 function ItemBasket() {
 	const { deleteIcon, image } = useContext(ImageContext)
-	const { products, setItemsInBasket } = useContext(ProductsContext)
+	const { products, itemsInBasket, setItemsInBasket } = useContext(ProductsContext)
 	function HandleDeleteitems() {
 		setItemsInBasket(0)
 	}
@@ -16,7 +16,13 @@ function ItemBasket() {
 			<Image className=' imageProductCart rounded me-3' src={products.product1.image.image1Thumb}></Image>
 			<div className='itemNamePriceContainer d-inline-block flex-grow-1'>
 				<p>{products.product1.name}</p>
-				<p>${products.product1.price}</p>
+				<p>
+					${products.product1.price} x {itemsInBasket} $
+					<span className='priceRatio'>
+						{products.product1.price * itemsInBasket}
+					</span>
+				</p>
+				{/* <p>${products.product1.price * itemsInBasket}</p> */}
 			</div>
 			<Image className='trash' src={deleteIcon} onClick={() => HandleDeleteitems()}></Image>
 		</div>
