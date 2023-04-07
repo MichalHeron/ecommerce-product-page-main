@@ -3,31 +3,40 @@
 }
 .corpName {
 	text-transform: uppercase;
-	color:  rgb(255, 125, 26);
+	color: rgb(255, 125, 26);
 	font-weight: bold;
-	font-size: .7rem;	
+	font-size: 0.7rem;
 }
-.itemName, .price {
+.itemName,
+.price {
 	text-transform: capitalize;
 	font-weight: bold;
 	font-size: 1.9rem;
 }
+.price {
+	margin-right: 1rem;
+}
 .priceBox {
-	.discount{
-		color:  rgb(255, 125, 26);
+	width: 100%;
+	.discount {
+		color: rgb(255, 125, 26);
 		font-weight: bold;
 		background-color: rgb(253, 242, 234);
 		width: fit-content;
-		border-radius: .3rem;
-		padding: .1rem .4rem;
-		}
+		border-radius: 0.3rem;
+		padding: 0.1rem 0.4rem;
+		margin-right: 1rem;
 	}
-	.prevPrice{
-		text-decoration: line-through;
-	}
+}
+.prevPrice {
+	text-decoration: line-through;
+	margin-right: 0px;
+	margin-left: auto;
+}
 
 .btn-group {
 	width: 100%;
+	margin: 1rem 0 1rem 0;
 	.btn:first-child,
 	.btn:last-child {
 		width: 3rem;
@@ -51,7 +60,7 @@
 	width: 100%;
 	background-color: rgb(255, 125, 26);
 	svg {
-        transform: scale(60%);
+		transform: scale(60%);
 	}
 }
 .addToCartBtn:hover {

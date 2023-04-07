@@ -43,6 +43,7 @@
 @media (min-width: 576px) {
   .cart {
     left: 50%;
+    min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
     max-width: 400px;

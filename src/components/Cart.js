@@ -18,11 +18,8 @@ function ItemBasket() {
 				<p>{products.product1.name}</p>
 				<p>
 					${products.product1.price} x {itemsInBasket} $
-					<span className='priceRatio'>
-						{products.product1.price * itemsInBasket}
-					</span>
+					<span className='priceRatio'>{products.product1.price * itemsInBasket}</span>
 				</p>
-				{/* <p>${products.product1.price * itemsInBasket}</p> */}
 			</div>
 			<Image className='trash' src={deleteIcon} onClick={() => HandleDeleteitems()}></Image>
 		</div>
@@ -38,7 +35,7 @@ export default function CartPreview() {
 			<p className='cartTitle container pt-3'>Cart</p>
 			<div className='border-top border-2 horiLine'></div>
 			{itemsInBasket == 0 ? (
-				<p className='cartEmpty'>Your cart is empty.</p>
+				<p className='cartEmpty m-2'>Your cart is empty.</p>
 			) : (
 				<div className='cartNotEmpty container mt-3'>
 					<ItemBasket />

@@ -9,28 +9,41 @@
   font-size: 0.7rem;
 }
 
-.itemName, .price {
+.itemName,
+.price {
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1.9rem;
 }
 
+.price {
+  margin-right: 1rem;
+}
+
+.priceBox {
+  width: 100%;
+}
 .priceBox .discount {
   color: rgb(255, 125, 26);
   font-weight: bold;
   background-color: rgb(253, 242, 234);
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 0.3rem;
   padding: 0.1rem 0.4rem;
+  margin-right: 1rem;
 }
 
 .prevPrice {
   text-decoration: line-through;
+  margin-right: 0px;
+  margin-left: auto;
 }
 
 .btn-group {
   width: 100%;
+  margin: 1rem 0 1rem 0;
 }
 .btn-group .btn:first-child,
 .btn-group .btn:last-child {

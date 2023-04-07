@@ -26,6 +26,7 @@
 
 .menuMobile {
   max-width: 60vw;
+  min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
 }
